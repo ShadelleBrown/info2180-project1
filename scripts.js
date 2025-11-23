@@ -1,25 +1,25 @@
-/* Add your JavaScript to this file */
 
 window.addEventListener('DOMContentLoaded', function() {
-    // Get the form and message div
+    //form and message div retrieved
     const form = document.querySelector('.newsletter form');
     const messageDiv = document.querySelector('.newsletter .message');
     
-    // Add event listener for form submission
+    //Event listener added for form submission
     form.addEventListener('submit', function(event) {
-        // Prevent default form submission
+
+        // Default form submission prevented
         event.preventDefault();
         
-        // Get the email input value
+        //Getting email address inputed
         const emailInput = document.getElementById('email');
         const emailValue = emailInput.value.trim();
         
-        // Check if email is empty
+        // Checking if no email adress was given 
         if (emailValue === '') {
-            // Display error message
+            // Show error message
             messageDiv.textContent = 'Please enter a valid email address.';
         } else {
-            // Display success message with the email address
+            // Show message of success along with the email address
             messageDiv.textContent = `Thank you! Your email address ${emailValue} has been added to our mailing list!`;
         }
     });
